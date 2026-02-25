@@ -18,10 +18,6 @@ app.add_middleware(
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
 
-# Load scaler if it exists
-scaler_path = os.path.join(BASE_DIR, "scaler.pkl")
-scaler = joblib.load(scaler_path) if os.path.exists(scaler_path) else None
-
 @app.get("/")
 def home():
     return {"message": "Heart Disease Risk Prediction API"}
