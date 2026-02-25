@@ -34,11 +34,6 @@ def predict(data: PatientData):
         data.diabetes, data.totChol, data.sysBP,
         data.diaBP, data.BMI, data.heartRate, data.glucose
     ]])
-
-    if scaler:
-        input_scaled = scaler.transform(input_data)
-    else:
-        input_scaled = input_data
     
     probability = model.predict_proba(input_scaled)[0][1]
     
