@@ -51,7 +51,6 @@ Thumbs.db
 
 # ML Models and Data
 *.h5
-*.pkl
 *.joblib
 *.joblib.gz
 models/
