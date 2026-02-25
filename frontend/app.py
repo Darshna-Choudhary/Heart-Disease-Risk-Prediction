@@ -41,7 +41,7 @@ if st.button("Predict Risk"):
         "glucose": glucose
     }
 
-    API_URL = "https://your-backend-name.onrender.com/predict"
+    API_URL = "https://heart-disease-risk-prediction-dd7j.onrender.com/predict"
 
     try:
         response = requests.post(API_URL, json=data, timeout=30)
